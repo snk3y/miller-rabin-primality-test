@@ -8,10 +8,7 @@ def is_probably_prime(very_long_num, num_of_loop=8):
     #num & 1 は偶数を弾くことができる。
     if very_long_num < 2 or very_long_num & 1 == 0:
         return False
-    return is_probably_prime_with_no_check(very_long_num, num_of_loop)
-
-
-def is_probably_prime_with_no_check(very_long_num, num_of_loop):
+        
     #2**s * d のdを求める。
     rest = (very_long_num - 1) >> 1
     while rest & 1 == 0:
